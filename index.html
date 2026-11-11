@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adega Caieiras – Vinhos & Destilados Premium | Caieiras, SP</title>
+    <meta name="description" content="Adega boutique em Caieiras, SP. Vinhos e destilados selecionados, rótulos nacionais e importados, kits de harmonização e entrega rápida via WhatsApp." />
+    
+    <!-- OpenGraph Social Cards -->
+    <meta property="og:title" content="Adega Caieiras – Vinhos & Destilados Premium" />
+    <meta property="og:description" content="Seleção cuidadosa de vinhos e destilados que contam histórias em Caieiras, SP. Entregas geladas e prontas para brindar." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Adega Caieiras – Vinhos & Destilados Premium" />
+    <meta name="twitter:description" content="Vinhos e destilados selecionados para cada ocasião. Peça pelo WhatsApp." />
+    
+    <!-- Google Fonts: Oswald (Sans Condensada), Playfair Display (Serif Itálica), Poppins (Prose) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              wine: {
+                bg: '#12060A',
+                deep: '#2A0A12',
+                mid: '#5A1020',
+                bright: '#7A1428',
+              },
+              cherry: '#D62839',
+              rose: '#E8508C',
+              gold: '#D9B36C',
+              warmWhite: '#F7EFEA',
+              warmMuted: '#CDB9B9'
+            },
+            fontFamily: {
+              oswald: ['Oswald', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+              poppins: ['Poppins', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Winery",
+      "name": "Adega Caieiras",
+      "description": "Adega boutique e conveniência premium em Caieiras, SP.",
+      "telephone": "+5511999998888",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Professor Carvalho Pinto, 450",
+        "addressLocality": "Caieiras",
+        "addressRegion": "SP",
+        "postalCode": "07700-000",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "11:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+  </head>
+  <body class="bg-[#12060A] text-[#F7EFEA] antialiased selection:bg-[#D62839] selection:text-white overflow-x-clip min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

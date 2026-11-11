@@ -1,0 +1,8 @@
+{
+  "name": "Remix Adega Premium Builder",
+  "description": "Ferramenta ágil para criar landing pages sofisticadas com efeitos de vídeo scroll para adegas e marcas de luxo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
