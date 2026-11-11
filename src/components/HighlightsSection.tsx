@@ -65,11 +65,12 @@ export const HighlightsSection: React.FC<HighlightsSectionProps> = ({
 
         {/* Grid: 4 cols desktop, 2 tablet, 1/2 mobile. 7 products + 1 final card */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {filteredProducts.map((prod: DeliveryProduct) => {
+          {filteredProducts.map((prod: DeliveryProduct, index: number) => {
             const itemMessage = encodeURIComponent(`Olá! Gostaria de pedir o produto "${prod.nome}" por R$ ${prod.preco} na ${config.name}.`);
             const itemWhatsappUrl = `https://wa.me/${config.whatsapp}?text=${itemMessage}`;
             const hasError = imgErrors[prod.id];
             const isBeer = prod.categoria === 'cervejas';
+            const isPriority = index < 4;
 
             return (
               <div
@@ -92,9 +93,9 @@ export const HighlightsSection: React.FC<HighlightsSectionProps> = ({
                         alt={prod.nome}
                         width={400}
                         height={533}
-                        loading="lazy"
+                        loading={isPriority ? "eager" : "lazy"}
                         decoding="async"
-                        fetchPriority="low"
+                        fetchPriority={isPriority ? "high" : "low"}
                         onError={() => handleImgError(prod.id)}
                         className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${
                           isBeer ? 'object-contain bg-[#12060A] p-2' : 'object-cover'

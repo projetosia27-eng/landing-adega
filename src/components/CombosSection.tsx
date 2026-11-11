@@ -19,7 +19,7 @@ export const CombosSection: React.FC<CombosSectionProps> = ({ config }) => {
           observer.disconnect();
         }
       },
-      { rootMargin: '300px 0px' }
+      { rootMargin: '600px 0px' }
     );
 
     if (sectionRef.current) {
